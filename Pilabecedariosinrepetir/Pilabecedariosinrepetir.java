@@ -39,7 +39,7 @@ public class Pilabecedariosinrepetir {
 
     //METODO PARA ORDENAR LAS LETRAS ALFABETICAMENTE
     public void ordenamiento() {
-
+    int i, j, apoyo;
         for (j = 0; j < pilaleatoria.length; j++) {
 
             for (i = j + 1; i < pilaleatoria.length; i++) {
@@ -47,15 +47,12 @@ public class Pilabecedariosinrepetir {
                     apoyo = pilaleatoria[i];
                     pilaleatoria[i] = pilaleatoria[j];
                     pilaleatoria[j] = (char) apoyo;
-
-                    System.out.print("Las letras se ordenaron alfabeticamente:\n");
-                    for (i = 0; i < pilaleatoria.length; i++) {
-                        System.out.print(" " + pilaleatoria[i] + "");
-                    }
-                } else {
-                    System.out.println("No hay datos por mostrar");
                 }
             }
+        }
+        System.out.print("Las letras se ordenaron alfabeticamente:\n");
+        for (i = 0; i < pilaleatoria.length; i++) {
+            System.out.print(" " + pilaleatoria[i] + "");
         }
     }
 
